@@ -6,9 +6,16 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "migrate": "babel-node ./node_modules/sequelize-cli/lib/sequelize db:migrate"
   },
-  "keywords": ["Node.js", "Express", "sqlite3", "nodemon", "sequelize"],
+  "keywords": [
+    "Node.js",
+    "Express",
+    "sqlite3",
+    "nodemon",
+    "sequelize"
+  ],
   "author": "Vinícius Silva Santos",
   "license": "ISC",
   "dependencies": {

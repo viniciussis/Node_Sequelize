@@ -52,5 +52,5 @@
     role: 'docente',
     createdAt: new Date(),
     updatedAt: new Date(),
-  },
+  }
 ];
