@@ -1,26 +1,65 @@
 class Controller {
-  constructor(entityService){
+  constructor(entityService) {
     this.entityService = entityService;
   }
 
-  async gelAll(req, res){
+  async getAll(_req, res) {
     try {
-      const listData = await this.entityService.findAll();
+      const listData = await this.entityService.getAllData();
       return res.status(200).json(listData);
     } catch (error) {
       //
     }
   }
 
-  async updateById(req, res){
+  async getById(req, res) {
     const { id } = req.params;
-    const updateData = req.body;
     try {
-      const isUpdated = await this.entityService.updateData(updateData, Number(id));
+      const data = await this.entityService.getDataById(Number(id));
+      return res.status(200).json(data);
     } catch (error) {
       //
     }
   }
+
+  async createData(req, res) {
+    const newData = req.body;
+    try {
+      await this.entityService.createData(newData);
+      return res.status(201).json({ message: 'Sucessfully created!' });
+    } catch (error) {
+      //
+    }
+  }
+
+  async updateById(req, res) {
+    const { id } = req.params;
+    const updatedData = req.body;
+    try {
+      const isUpdated = await this.entityService.updateData(updatedData, Number(id));
+      if (!isUpdated) {
+        return res.status(400).json({ message: 'Update Failed!' });
+      }
+      return res.status(200).json({ message: 'Successfully updated!', updatedData });
+    } catch (error) {
+      //
+    }
+  }
+
+  async deleteById(req, res) {
+    const { id } = req.params;
+    try {
+      const isDeleted = await this.entityService.deleteData(Number(id));
+      if (!isDeleted) {
+        return res.status(400).json({ message: 'Delete Failed!' });
+      }
+      return res.status(200).json({ message: 'Successfully deleted!'});
+    } catch (error) {
+      //
+    }
+  }
+
+
 }
 
 module.exports = Controller;
