@@ -8,21 +8,25 @@ module.exports = {
         title: 'Node.js',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'Java',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'Python',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'C#',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
     ], {});
   },

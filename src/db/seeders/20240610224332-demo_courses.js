@@ -12,6 +12,7 @@ module.exports = {
         teacher_id: 5,
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'SpringBoot',
@@ -21,6 +22,7 @@ module.exports = {
         teacher_id: 5,
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'Python Web com Django',
@@ -30,6 +32,7 @@ module.exports = {
         teacher_id: 6,
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         title: 'Orientação a Objetos com C#',
@@ -39,6 +42,7 @@ module.exports = {
         teacher_id: 6,
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
     ], {});
   },

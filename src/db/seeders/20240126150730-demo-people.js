@@ -12,6 +12,7 @@ module.exports = {
         role: 'estudante',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         name: 'Igor Estudante',
@@ -21,6 +22,7 @@ module.exports = {
         role: 'estudante',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         name: 'Aline Estudante',
@@ -30,6 +32,7 @@ module.exports = {
         role: 'estudante',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         name: 'Fernando Estudante',
@@ -39,6 +42,7 @@ module.exports = {
         role: 'estudante',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         name: 'Ricardo Docente',
@@ -48,15 +52,17 @@ module.exports = {
         role: 'docente',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         name: 'Dine Docente',
         email: 'dine@email.com',
         cpf: '80941142078',
-        active: true,
+        active: false,
         role: 'docente',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       }
     ], {});
   },

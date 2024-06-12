@@ -10,6 +10,7 @@ module.exports = {
         status: 'matriculado',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         student_id: 2,
@@ -17,6 +18,7 @@ module.exports = {
         status: 'matriculado',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         student_id: 3,
@@ -24,6 +26,7 @@ module.exports = {
         status: 'matriculado',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
       {
         student_id: 4,
@@ -31,6 +34,7 @@ module.exports = {
         status: 'matriculado',
         createdAt: new Date(),
         updatedAt: new Date(),
+        deletedAt: null,
       },
     ], {});
   },
