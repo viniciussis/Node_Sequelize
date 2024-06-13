@@ -8,7 +8,7 @@ class Controller {
       const listData = await this.entityService.getAllData();
       return res.status(200).json(listData);
     } catch (error) {
-      //
+      return res.status(500).json({ error: error.message });
     }
   }
 
@@ -18,7 +18,7 @@ class Controller {
       const data = await this.entityService.getDataById(Number(id));
       return res.status(200).json(data);
     } catch (error) {
-      //
+      return res.status(500).json({ error: error.message });
     }
   }
 
@@ -28,7 +28,7 @@ class Controller {
       await this.entityService.createData(newData);
       return res.status(201).json({ message: 'Sucessfully created!' });
     } catch (error) {
-      //
+      return res.status(500).json({ error: error.message });
     }
   }
 
@@ -42,7 +42,7 @@ class Controller {
       }
       return res.status(200).json({ message: 'Successfully updated!', updatedData });
     } catch (error) {
-      //
+      return res.status(500).json({ error: error.message });
     }
   }
 
@@ -53,13 +53,11 @@ class Controller {
       if (!isDeleted) {
         return res.status(400).json({ message: 'Delete Failed!' });
       }
-      return res.status(200).json({ message: 'Successfully deleted!'});
+      return res.status(200).json({ message: 'Successfully deleted!' });
     } catch (error) {
-      //
+      return res.status(500).json({ error: error.message });
     }
   }
-
-
 }
 
 module.exports = Controller;

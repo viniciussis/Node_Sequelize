@@ -5,6 +5,7 @@ const peopleController = new PeopleController();
 const router = Router();
 
 router.get('/people', (req, res) => peopleController.getAll(req, res));
+router.get('/people/all', (req, res) => peopleController.getAllPeople(req, res));
 router.get('/people/:id', (req, res) => peopleController.getById(req, res));
 router.post('/people', (req, res) => peopleController.createData(req, res));
 router.put('/people/:id', (req, res) => peopleController.updateById(req, res));
